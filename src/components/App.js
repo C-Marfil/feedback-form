@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Route, Routes } from "react-router";
 import Welcome from "./Welcome";
 import Cuestionario from "./Cuestionario";
+import Resultados from "./Resultados";
 import "../styles/App.css";
 
 const App = () => {
@@ -16,6 +17,7 @@ const App = () => {
           path="/cuestionario"
           element={<Cuestionario answers={answers} setAnswers={setAnswers} />}
         />
+        <Route path="/resultados" element={<Resultados answers={answers} />} />
       </Routes>
     </div>
   );

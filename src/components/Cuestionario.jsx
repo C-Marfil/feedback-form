@@ -9,15 +9,15 @@ const Cuestionario = ({ setAnswers, answers }) => {
 
   const handleNext = () => {
     setAnswers([...answers, currentAnswer]);
-    if (questionNumber === 10) {
+    setCurrentAnswer("");
+    if (questionNumber === 9) {
       navigate("/resultados");
     }
-    window.location.reload();
   };
 
   return (
     <div>
-      <Question questionNumber={questionNumber} setAnswers={setAnswers} />
+      <Question questionNumber={questionNumber} />
       <select
         className="answer"
         value={currentAnswer}
