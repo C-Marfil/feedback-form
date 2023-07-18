@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../styles/resultados.css";
 
 const CheeseImages = ({ answers }) => {
   const [hoveredCheese, setHoveredCheese] = useState(null);

@@ -1,0 +1,73 @@
+.cheese--full {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cheese {
+    position: absolute;
+    scale: 80%;
+}
+
+#cheese0 {
+    left: 200px;
+}
+
+#cheese1 {
+    left: 280px;
+}
+
+#cheese2 {
+    top: 100px;
+    left: 300px;
+}
+
+#cheese3 {
+    top: 158px;
+    left: 292px;
+}
+
+#cheese4 {
+    top: 213px;
+    left: 292px;
+}
+
+#cheese5 {
+    top: 217px;
+    left: 295px;
+}
+
+#cheese6 {
+    top: 220px;
+    left: 214px;
+}
+
+#cheese7 {
+    top: 220px;
+    left: 164px;
+}
+
+#cheese8 {
+    top: 175px;
+    left: 157px;
+}
+
+#cheese9 {
+    top: 120px;
+    left: 147px;
+}
+
+.cheese {
+    scale: 30%;
+}
+
+.cheese5 {
+    scale: 50%;
+}
+
+.cheese8 {
+    scale: 60%;
+}
+
+.cheese10 {
+    scale:90%;
+}
