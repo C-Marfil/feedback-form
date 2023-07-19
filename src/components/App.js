@@ -17,7 +17,10 @@ const App = () => {
           path="/cuestionario"
           element={<Cuestionario answers={answers} setAnswers={setAnswers} />}
         />
-        <Route path="/resultados" element={<Resultados answers={answers} />} />
+        <Route
+          path="/resultados"
+          element={<Resultados answers={answers} nameCompany={nameCompany} />}
+        />
       </Routes>
     </div>
   );

@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import "../styles/resultados.css";
 
-const CheeseImages = ({ answers }) => {
+const CheeseImages = ({ answers, nameCompany }) => {
   const [hoveredCheese, setHoveredCheese] = useState(null);
+  const { name, company } = nameCompany;
   let totalText;
 
   const handleMouseEnter = (index) => {
@@ -27,7 +28,9 @@ const CheeseImages = ({ answers }) => {
   return (
     <div>
       <h1>Resultado {total > 0 ? total : 0}</h1>
-      <p>{totalText}</p>
+      <p>
+        {name} from {company}, {totalText}
+      </p>
       <div className="cheese--full">
         {answers.map((answer, index) => {
           const cheeseClassName = `cheese cheese${answer}`;
