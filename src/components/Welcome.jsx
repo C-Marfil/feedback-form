@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { useNavigate } from "react-router";
 
 const Welcome = ({ setNameCompany }) => {
@@ -29,6 +30,10 @@ const Welcome = ({ setNameCompany }) => {
       </form>
     </div>
   );
+};
+
+Welcome.propTypes = {
+  setNameCompany: PropTypes.func.isRequired,
 };
 
 export default Welcome;

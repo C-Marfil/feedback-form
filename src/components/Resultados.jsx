@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 import "../styles/resultados.css";
 
 const CheeseImages = ({ answers, nameCompany }) => {
@@ -47,7 +48,7 @@ const CheeseImages = ({ answers, nameCompany }) => {
 
           return (
             <div
-              key={index}
+              key={answer}
               onMouseEnter={() => handleMouseEnter(index)}
               onMouseLeave={handleMouseLeave}
             >
@@ -70,6 +71,14 @@ const CheeseImages = ({ answers, nameCompany }) => {
       </div>
     </div>
   );
+};
+
+CheeseImages.propTypes = {
+  answers: PropTypes.arrayOf(PropTypes.number).isRequired,
+  nameCompany: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    company: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 export default CheeseImages;

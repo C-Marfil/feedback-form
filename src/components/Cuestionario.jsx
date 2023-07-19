@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router";
+import PropTypes from "prop-types";
 import Question from "./Question";
 
 const Cuestionario = ({ setAnswers, answers }) => {
@@ -34,6 +35,11 @@ const Cuestionario = ({ setAnswers, answers }) => {
       </button>
     </div>
   );
+};
+
+Cuestionario.propTypes = {
+  setAnswers: PropTypes.func.isRequired,
+  answers: PropTypes.arrayOf(PropTypes.number).isRequired,
 };
 
 export default Cuestionario;

@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const Question = ({ questionNumber }) => {
   const getImagePath = () => {
@@ -18,6 +19,10 @@ const Question = ({ questionNumber }) => {
   };
 
   return <img src={getImagePath()} alt="Question" />;
+};
+
+Question.propTypes = {
+  questionNumber: PropTypes.number.isRequired,
 };
 
 export default Question;
