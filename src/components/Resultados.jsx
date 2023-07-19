@@ -3,7 +3,7 @@ import "../styles/resultados.css";
 
 const CheeseImages = ({ answers }) => {
   const [hoveredCheese, setHoveredCheese] = useState(null);
-  console.log(answers, "answers");
+  let totalText;
 
   const handleMouseEnter = (index) => {
     setHoveredCheese(index);
@@ -18,9 +18,16 @@ const CheeseImages = ({ answers }) => {
     0
   );
 
+  if (total > 50) {
+    totalText = "Your total is over 50 well done";
+  } else {
+    totalText = "You need to work harder";
+  }
+
   return (
     <div>
-      <h1>Resultado {total}</h1>
+      <h1>Resultado {total > 0 ? total : 0}</h1>
+      <p>{totalText}</p>
       <div className="cheese--full">
         {answers.map((answer, index) => {
           const cheeseClassName = `cheese cheese${answer}`;
